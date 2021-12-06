@@ -48,7 +48,7 @@ export const Timer = () => {
                         <Button variant="secondary" onClick={() => changeTimeValue(900)}>Long Break</Button>
                     </ButtonGroup>
                     <div className="clock">
-                        {Math.floor(time / 60) + ":" + (time % 60 ? time % 60 : '00')}
+                        {Math.floor(time / 60) + ":" + (time % 60 < 10 ? '0' + time % 60 : time % 60 ? time % 60 : '00')}
                     </div>
                     <div className="timer-buttons">
                         <Button variant="dark" onClick={startTimer}>Start</Button>
